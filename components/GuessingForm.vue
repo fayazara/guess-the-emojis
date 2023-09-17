@@ -22,11 +22,15 @@
     size="lg"
   />
   <UAlert
-    v-if="error"
-    icon="i-heroicons-exclamation-triangle"
-    color="rose"
+    v-if="showMessage"
     variant="solid"
-    title="Oops! Wrong guess. Try again!"
+    :icon="!isDone ? 'i-heroicons-exclamation-triangle' : 'i-heroicons-check'"
+    :color="!isDone ? 'rose' : 'green'"
+    :title="
+      !isDone
+        ? 'Oops! Wrong guess. Try again!'
+        : 'Congratulations! You got all guesses right!'
+    "
   />
   <div class="flex items-center justify-center">
     <UButton
@@ -44,7 +48,8 @@ import emojis from "@/content/emojis";
 const option_1 = ref("");
 const option_2 = ref("");
 const currentIndex = ref(0);
-const error = ref(false);
+const showMessage = ref(false);
+const isDone = ref(false);
 
 const currentEmoji = computed(() => {
   return emojis[currentIndex.value];
@@ -68,10 +73,14 @@ const check = () => {
     if (currentIndex.value < emojis.length - 1) {
       currentIndex.value++;
     } else {
-      alert("You have guessed all the emojis!");
+      isDone.value = true;
     }
   } else {
-    error.value = true;
+    isDone.value = false;
   }
+  showMessage.value = true;
+  setTimeout(() => {
+    showMessage.value = false;
+  }, 3000);
 };
 </script>
