@@ -38,7 +38,7 @@
       variant="ghost"
       color="gray"
       size="lg"
-      @click="currentIndex++"
+      @click="skip"
     />
   </div>
 </template>
@@ -83,4 +83,8 @@ const check = () => {
     showMessage.value = false;
   }, 3000);
 };
+
+const skip = () => {
+  currentIndex.value = currentIndex.value < emojis.length - 1 ? currentIndex.value + 1: 0
+}
 </script>

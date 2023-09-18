@@ -6,6 +6,7 @@
       Made by
       <a class="underline hover:text-gray-300" href="https://twitter.com/fayazara">Fayaz</a>
     </div>
+    <nuxt-link to="/changelog" class="hover:text-gray-300 hover:underline">Changelog</nuxt-link>
     <div>
       <a class="hover:underline hover:text-gray-300" href="https://github.com/fayazara/guess-the-emojis"
         >Source code</a
