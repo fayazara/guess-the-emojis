@@ -2,6 +2,8 @@
 
 A simple game where you have to guess the emoji based on the image mashup. Images picked from Google emoji kitchen.
 
+Live: https://guess-the-emojis.pages.dev/
+
 ## How to play
 
 Just guess the emojis you think the image is made up of.
