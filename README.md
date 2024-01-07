@@ -2,7 +2,7 @@
 
 A simple game where you have to guess the emoji based on the image mashup. Images picked from Google emoji kitchen.
 
-Live: https://guess-the-emojis.pages.dev/
+Live: https://guessmoji.vercel.app
 
 ## How to play
 
