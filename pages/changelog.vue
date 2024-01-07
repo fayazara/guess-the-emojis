@@ -39,6 +39,7 @@ const changelog = [
       `<ul>
         <li>Renamed the game as <b>GuessMoji</b>.</li>
         <li>Added a new logo.</li>
+        <li>Added dark mode.</li>
         <li>Added changelog page.</li>
         <li>Added alert messages for successful guess and failure.</li>
         <li>Fixed error when user clicks skip and reaches end of emojis.</li>
